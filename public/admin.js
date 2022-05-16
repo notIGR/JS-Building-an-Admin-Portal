@@ -15,6 +15,12 @@ const renderBook = (book) => {
     
     const submitBtn = document.createElement("button")
     submitBtn.textConten = "Submit Chnges"
+
+    li.append(changeQuantiy, submitBtn)
+
+    root.append(li)
+
+    
 }
 
 main()
