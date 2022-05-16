@@ -68,7 +68,7 @@ const loadBooks = async () => {
     return books
 }
 
-const saveBooks = (books) => {
+const saveBooks = async (books) => {
     await Fs.writeFile(DB_PATH, JSON.stringify({ books }, null, 2))
 }
 
