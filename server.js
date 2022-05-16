@@ -6,7 +6,7 @@ const Path = require('path');
 const app = express();
 const liveServer = require('live-server');
 
-async function main() {
+const main = async () => {
 
     app.use(cors());
 
@@ -63,12 +63,12 @@ async function main() {
 
 const DB_PATH = Path.join(__dirname, 'db.json')
 
-async function loadBooks() {
+const loadBooks = async () => {
     let { books } = JSON.parse(await Fs.readFile(DB_PATH))
     return books
 }
 
-async function saveBooks(books) {
+const saveBooks = (books) => {
     await Fs.writeFile(DB_PATH, JSON.stringify({ books }, null, 2))
 }
 
